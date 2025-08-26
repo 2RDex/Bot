@@ -28,6 +28,13 @@ function setRotatingPresence(c) {
   setInterval(update, 30_000);  // อัปเดตทุก 30 วินาที
 }
 
+//เว็บ
+
+const express = require('express');
+const app = express();
+app.get('/', (_, res) => res.send('Bot is running!'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Web server running on ${PORT}`));
 
 //==============
 
